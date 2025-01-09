@@ -38,6 +38,11 @@ namespace SImpl.Storage.Repository.Dapper.Services
             return _dbConnection;
         }
 
+        public IDbTransaction GetTransaction()
+        {
+            return _transaction;
+        }
+
         public void Dispose()
         {
             _dbConnection?.Dispose();
